@@ -211,7 +211,7 @@ nav h1 a {
   display: flex;
 }
 #restaurants-list {
-  background-color: #f3f3f3;
+  background-color: white;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
@@ -225,26 +225,26 @@ nav h1 a {
 
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
+  border-radius: 10px;
   font-family: Arial, sans-serif;
-  margin: 15px;
+  margin: 10px;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
 #restaurants-list .restaurant-img {
-  background-color: #ccc;
   display: block;
   margin: 0;
+  margin-top: 30px;
   max-width: 100%;
-  min-height: 248px;
   min-width: 100%;
 }
 
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #3397DB;
   font-family: Arial, sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -260,16 +260,23 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: orange;
-  border-bottom: 3px solid #eee;
+  background-color: #3397DB;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
   margin: 15px 0 0;
-  padding: 8px 30px 10px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  border-radius: 3px;
+}
+
+#restaurants-list li a:hover{
+  background-color: #136ca9;
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -383,7 +390,7 @@ nav h1 a {
 }
 
 
-@media only screen and (max-width: 1023px) {
+@media(max-width: 1023px) {
   .inside header {
       position: fixed;
       width: 100%;
@@ -411,7 +418,7 @@ nav h1 a {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   #restaurant-container, #reviews-container {
       padding: 0;
   }
@@ -420,5 +427,12 @@ nav h1 a {
 @media(min-width: 425px) {
   .inside #footer{
     width:100%;
+  }
+}
+
+@media(min-width: 375px) {
+  #restaurants-list li{
+    width:270px;
+    margin: 15px;
   }
 }
