@@ -125,7 +125,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  * Create all reviews HTML and add them to the webpage.
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
-  const container = document.getElementById('reviews-container');
+  const container = document.getElementById('review-collection');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
@@ -149,19 +149,25 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
+  name.classList.add("name");
   name.innerHTML = review.name;
   li.appendChild(name);
 
   const date = document.createElement('p');
+  date.classList.add("date");
   date.innerHTML = review.date;
   li.appendChild(date);
 
   const rating = document.createElement('p');
-  rating.innerHTML = `Rating: ${review.rating}`;
+  rating.classList.add("rating");
+  const ratingPercentage = (parseInt(review.rating)/5)*100;
+  rating.innerHTML = `<span class="stars">
+                        <span style="width:${ratingPercentage}%"></span>
+                      </span>`;
   li.appendChild(rating);
 
-  const comments = document.createElement('p');
-  comments.innerHTML = review.comments;
+  const comments = document.createElement('i');
+  comments.innerHTML = `&ldquo;${review.comments} &rdquo;`;
   li.appendChild(comments);
 
   return li;
