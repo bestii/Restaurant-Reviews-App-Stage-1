@@ -200,13 +200,25 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Listing ====================== */
-
+.restaurant-list-container{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
-  text-align: center;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #restaurants-list li {
