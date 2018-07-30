@@ -81,7 +81,8 @@ section {
 
 #footer {
   background-color: #444;
-  color: #aaa;
+  /* color: #aaa; */
+  color: white;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -166,6 +167,10 @@ nav h1 a {
   text-decoration: underline;
 }
 
+.leaflet-control-attribution.leaflet-control a{
+  color: black;
+}
+
 /* ====================== Map ====================== */
 
 #map {
@@ -178,13 +183,13 @@ nav h1 a {
 
 .filter-options {
   width: 100%;
-  background-color: #3397DB;
+  background-color: black;
 }
 
 .filter-options h2 {
   color: white;
   font-size: .8rem;
-  margin: 0 20px;
+  margin: 0 20px 10px 20px;
   padding-top: 5px;
 }
 
@@ -198,6 +203,15 @@ nav h1 a {
   margin: 10px;
   padding: 0 10px;
   width: 200px;
+}
+
+.form-group{
+  display: inline-block;
+  color:white;
+}
+
+.form-group label{
+    display:block;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -243,7 +257,8 @@ nav h1 a {
 }
 
 #restaurants-list li h1 {
-  color: #3397DB;
+  /* color: #3397DB; */
+  color:black;
   font-family: inherit;
   font-size: 14px;
   letter-spacing: 0;
@@ -258,7 +273,8 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: #3397DB;
+  /* background-color: #3397DB; */
+  background-color: black;
   color: #fff;
   display: inline-block;
   margin: 15px 0 0;
@@ -318,7 +334,7 @@ nav h1 a {
 
 #restaurant-img {
   max-width: 100%;
-  min-width: 100%;
+  height: auto;
 }
 
 #restaurant-address {

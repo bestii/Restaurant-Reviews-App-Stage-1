@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
@@ -27,12 +27,23 @@
     <section>
       <div class="filter-options text-center">
         <h2 class="text-uppercase">Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
-        </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-        </select>
+        <div class="form-group">
+            <label for="neighborhoods-select">
+                Select Neighborhoods
+              </label>
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+              <option value="all">All Neighborhoods</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="cuisines-select">
+                Select Cuisines
+              </label>
+              <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+                  <option value="all">All Cuisines</option>
+              </select>
+        </div>
       </div>
     </section>
     <section>
