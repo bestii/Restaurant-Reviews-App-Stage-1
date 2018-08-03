@@ -4,6 +4,7 @@
 <head>
   <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="List of neighborhoods restaurants"/>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -15,14 +16,14 @@
   <header>
     <nav>
       <h1>
-        <a class="font-family-gothic font-weight-bold" href="/">Restaurant Reviews</a>
+        <a class="font-family-gothic font-weight-bold" href="/" tabindex="-1">Restaurant Reviews</a>
       </h1>
     </nav>
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
+    <section aria-label="Restaurant Search results map" id="map-container">
+      <div role="application"  id="map"></div>
     </section>
     <section>
       <div class="filter-options text-center">
@@ -31,7 +32,7 @@
             <label for="neighborhoods-select">
                 Select Neighborhoods
               </label>
-            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" tabindex="1">
               <option value="all">All Neighborhoods</option>
             </select>
         </div>
@@ -40,15 +41,15 @@
             <label for="cuisines-select">
                 Select Cuisines
               </label>
-              <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+              <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" tabindex="2">
                   <option value="all">All Cuisines</option>
               </select>
         </div>
       </div>
     </section>
-    <section>
+    <section aria-label="Restaurants list">
       <div class="restaurant-list-container">
-        <ul id="restaurants-list" class="font-family-gothic"></ul>
+        <ul  id="restaurants-list" class="font-family-gothic"></ul>
       </div>
     </section>
   </main>
